@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="ios-contact-outline"></ion-icon>
+      First Name Last name
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="ios-card" item-left></ion-icon>Payment
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ios-pin-outline" item-left></ion-icon>Addresses
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ios-help-circle-outline" item-left></ion-icon>About
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label>Delivery Push Notifications</ion-label>
+      <ion-toggle [(ngModel)]="pushNotifications"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Delivery SMS Notifications</ion-label>
+      <ion-toggle [(ngModel)]="smsNotifications"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="md-log-out" item-left></ion-icon>Log Out
+    </ion-item>
+  </ion-list>
+</ion-content>

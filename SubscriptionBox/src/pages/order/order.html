@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Order
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+  <ion-buttons>
+    <button ion-button icon-only (click)="addItem()" >
+      <ion-icon name="add"></ion-icon> Add item
+    </button>
+  </ion-buttons>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items | async" (click)="showOptions(item.$key, item.title)">
+      {{item.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>
